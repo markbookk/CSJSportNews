@@ -1,4 +1,8 @@
 # CSJSportNews
-CSJSportNews Code \n
-Our different sets of codes for our first app! This app shows different matches and scores. 
-
+CSJSportNews Code
+Our different sets of codes for our first app! This app shows different matches and scores.
+Members:
+Marcos Nieves
+Enrique Viera
+Carlos Power
+Pablo Medero
