@@ -4,5 +4,5 @@ Our different sets of codes for our first app! This app shows different matches 
 Members:
 Marcos Nieves
 Enrique Viera
-Carlos Power es homosexual <3
+Carlos Power
 Pablo Medero
