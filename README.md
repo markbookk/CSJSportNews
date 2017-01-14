@@ -8,10 +8,10 @@ It solves the problem that many students have of not having up-to-date results o
 
 ## Members
 
-Marcos Nieves
-Pablo Medero
-Carlos Power
-Enrique Viera
+*Marcos Nieves
+*Pablo Medero
+*Carlos Power
+*Enrique Viera
 
 **For more information please visit our wiki for the progress of our app.**
 ***
