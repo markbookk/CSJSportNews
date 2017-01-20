@@ -1,0 +1,16 @@
+body{
+    background: red;
+}
+h1{
+    text-align: center;
+    background: yellow;
+    border: red;
+    font-family: Impact;
+    font-size: 40px;
+    color: red;
+    padding: 60px;
+    margin: -8px;
+    border-width: large;
+    border-color: red;
+    border-style: solid;
+}
