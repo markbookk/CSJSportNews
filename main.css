@@ -12,5 +12,9 @@ h1{
     margin: -8px;
     border-width: large;
     border-color: red;
-    border-style: solid;
+    border-style: solid
+}
+h2, p{
+    text-align: center;
+    background: yellow;
 }
