@@ -1,20 +1,27 @@
 body{
-    background: red;
+    background-color: red;
 }
 h1{
     text-align: center;
     background: yellow;
     border: red;
     font-family: Impact;
-    font-size: 40px;
+    font-size: 30px;
     color: red;
-    padding: 60px;
-    margin: -8px;
-    border-width: large;
-    border-color: red;
-    border-style: solid
+    padding: 30px;
+    margin-top: -2px;
+    border-radius: 2px;
 }
-h2, p{
+#liveScores{
     text-align: center;
     background: yellow;
+    margin-top: -15px;
+    border-radius: 2px;
+}
+
+h2{
+    text-align: center;
+    background: yellow;
+    margin-top: -10px;
+    border-radius: 2px;
 }
