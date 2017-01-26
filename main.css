@@ -1,27 +1,17 @@
 body{
     background-color: red;
 }
-h1{
+.liveScores{
     text-align: center;
     background: yellow;
-    border: red;
-    font-family: Impact;
-    font-size: 30px;
-    color: red;
-    padding: 30px;
-    margin-top: -2px;
+    margin-top: -19px;
     border-radius: 2px;
+    padding: 1px;
 }
-#liveScores{
+.news{
     text-align: center;
     background: yellow;
-    margin-top: -15px;
+    margin-top: 10px;
     border-radius: 2px;
 }
 
-h2{
-    text-align: center;
-    background: yellow;
-    margin-top: -10px;
-    border-radius: 2px;
-}
