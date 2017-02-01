@@ -1,0 +1,53 @@
+a:link{
+    color: black;
+}
+
+body{
+    background-color: #FF8A80;
+
+}
+#header{
+  background-color: #2196F3;
+  text-align: center;
+  padding: 5px;
+  margin-top: -10px;
+  color: white;
+  box-shadow: 1px 1px 1px 1px #42A5F5;
+  margin-left: -7px;
+  margin-right: -7px;
+  font-family: 'Dosis', sans-serif;
+}
+
+#articulo{
+  background-color: white;
+  padding: 8px 8px;
+  border-radius: 2px;
+  margin-top: 4px;
+  box-shadow: 1px 1px 1px 1px gray;
+  font-family: 'Dosis', sans-serif;
+}
+
+#title{
+  text-align:left;
+  font-family: 'Dosis', sans-serif;
+}
+p{
+  font-family: 'Dosis', sans-serif;
+}
+a:link{
+  text-decoration: none;
+  text-decoration-color: white;
+
+}
+
+a:visited{
+  color: white;
+}
+a:active{
+  text-decoration-color: white;
+}
+img{
+  text-align: center;
+}
+
+a:d
