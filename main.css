@@ -12,9 +12,26 @@ h1{
     margin: -8px;
     border-width: large;
     border-color: red;
-    border-style: solid
+    border-style: solid;
+    border-radius: 15px;
 }
-h2, p{
+p{
     text-align: center;
     background: yellow;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 20px;
+
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
 }
