@@ -15,14 +15,14 @@ h1{
     border-style: solid;
     border-radius: 15px;
 }
-p{
-    text-align: center;
-    background: yellow;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 20px;
-
-}
+/*h2 p{*/
+    /*text-align: center;*/
+    /*background: yellow;*/
+    /*margin-left: 1em;*/
+    /*margin-right: 1em;*/
+    /*border-radius: 20px;*/
+/**/
+/*}*/
 
 .demo-card-wide.mdl-card {
     width: 512px;
