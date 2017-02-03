@@ -1,19 +1,19 @@
 body{
     background: red;
 }
-h1{
-    text-align: center;
-    background: yellow;
-    border: red;
-    font-family: Impact;
-    font-size: 40px;
-    color: red;
-    padding: 60px;
-    margin: -8px;
-    border-width: large;
-    border-color: red;
-    border-style: solid;
-    border-radius: 15px;
+/*h1{*/
+    /*text-align: center;*/
+    /*background: yellow;*/
+    /*border: red;*/
+    /*font-family: Impact;*/
+    /*font-size: 40px;*/
+    /*color: red;*/
+    /*padding: 60px;*/
+    /*margin: -8px;*/
+    /*border-width: large;*/
+    /*border-color: red;*/
+    /*border-style: solid;*/
+    /*border-radius: 15px;*/
 }
 /*h2 p{*/
     /*text-align: center;*/
@@ -24,14 +24,17 @@ h1{
 /**/
 /*}*/
 
-.demo-card-wide.mdl-card {
-    width: 512px;
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+    margin-left: 27sp;
 }
-.demo-card-wide > .mdl-card__title {
+.demo-card-square > .mdl-card__title {
     color: #fff;
-    height: 176px;
-    background: url('../assets/demos/welcome_card.jpg') center / cover;
+    background:
+            url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
 }
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
+.jumbotron{
+    margin-top: -20px;
+    background: yellow;
 }
