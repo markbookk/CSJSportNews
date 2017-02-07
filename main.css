@@ -1,3 +1,6 @@
+* {
+    border: 1px solid;
+}
 body{
     background: red;
 }
@@ -25,14 +28,18 @@ body{
 /*}*/
 
 .demo-card-square.mdl-card {
-    width: 320px;
-    height: 320px;
-    margin-left: 27sp;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10px;
+    margin-left: 27px;
 }
 .demo-card-square > .mdl-card__title {
     color: #fff;
     background:
-            url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+            url('../assets/demos/dog.png') no-repeat #46B6AC;
+}
+.card{
+    margin: 25px;
 }
 .jumbotron{
     margin-top: -20px;
