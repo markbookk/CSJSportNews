@@ -1,6 +1,6 @@
-/** {*/
-    /*border: 1px solid;*/
-/*}*/
+* {
+    border: 1px solid;
+}
 body{
     background: red;
 }
@@ -28,8 +28,8 @@ body{
 /*}*/
 
 .demo-card-square.mdl-card {
-    width: 50%;
-    height: 50%;
+    width: 320px;
+    height: 320px;
     margin-bottom: 10px;
     margin-left: 27px;
 }
@@ -37,6 +37,10 @@ body{
     color: #fff;
     background:
             url('../assets/demos/dog.png') no-repeat #46B6AC;
+}
+.mdl-card{
+    width: inherit;
+    min-width: 330px;
 }
 .card{
     justify-content: center;
