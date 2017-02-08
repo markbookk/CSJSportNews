@@ -1,6 +1,6 @@
-* {
-    border: 1px solid;
-}
+/** {*/
+    /*border: 1px solid;*/
+/*}*/
 body{
     background: red;
 }
@@ -46,6 +46,8 @@ body{
     justify-content: center;
 }
 .jumbotron{
+    position: relative;
     margin-top: -20px;
     background: yellow;
+    padding: 300px;
 }
