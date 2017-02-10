@@ -1,0 +1,23 @@
+body {
+
+}
+
+
+body:after {
+    content : "";
+    display: block;
+    position: absolute;
+    width:1200px;
+    height: 800px;
+    top: 0;
+    left: 1;
+    right: 0;
+    background-image: url("/Users/Pablo/Desktop/IMG_0253.JPG");
+    opacity : 0.5;
+    z-index: -1;
+}
+
+h2{
+  text-decoration: overline;
+  padding-top: 160px;
+}
