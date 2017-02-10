@@ -1,32 +1,12 @@
 /** {*/
     /*border: 1px solid;*/
 /*}*/
+
 body{
     background: red;
+    background-position: center;
+    background-size: cover;
 }
-/*h1{*/
-    /*text-align: center;*/
-    /*background: yellow;*/
-    /*border: red;*/
-    /*font-family: Impact;*/
-    /*font-size: 40px;*/
-    /*color: red;*/
-    /*padding: 60px;*/
-    /*margin: -8px;*/
-    /*border-width: large;*/
-    /*border-color: red;*/
-    /*border-style: solid;*/
-    /*border-radius: 15px;*/
-}
-/*h2 p{*/
-    /*text-align: center;*/
-    /*background: yellow;*/
-    /*margin-left: 1em;*/
-    /*margin-right: 1em;*/
-    /*border-radius: 20px;*/
-/**/
-/*}*/
-
 .demo-card-square.mdl-card {
     width: 320px;
     height: 320px;
@@ -45,9 +25,12 @@ body{
 .card{
     justify-content: center;
 }
-.jumbotron{
-    position: relative;
-    margin-top: -20px;
-    background: yellow;
-    padding: 300px;
+.intro{
+    text-align: center;
+    /*padding: 25%;*/
+    /*background: url(http://www.csjpr.org/album/47506/71534.jpg);*/
+    /*background-size: cover;*/
+    /*height: 100%;*/
+    /*background-position: absolute;*/
+    /*width: 100%;*/
 }
