@@ -2,10 +2,34 @@
     /*border: 1px solid;*/
 /*}*/
 
-body{
+body {
     background: red;
     background-position: center;
     background-size: cover;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+}
+h3
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+/*@media (max-width: 600px) {*/
+    /*.carousel-caption {*/
+        /*display: none;*/
+    /*}*/
+/*}*/
 /*}*/
 /*.demo-card-square.mdl-card {*/
     /*width: 320px;*/
@@ -26,5 +50,4 @@ body{
     /*justify-content: center;*/
 /*}*/
 
-.img-responsive{
-}
+
