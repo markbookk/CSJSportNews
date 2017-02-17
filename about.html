@@ -11,20 +11,6 @@
 
 <body>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-    var socket = io();
-    socket.on('welcome-live-score', function(data) {
-      document.getElementById("team1").innerHTML = data.message;
-    });
-
-    socket.on('chat message', function(msg){
-      document.getElementById("team1").innerHTML = msg;
-    });
-  </script>
-
-
   <nav class="navbar navbar-default">
     <div class="container-fluid">
 <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,7 +30,7 @@
   <ul class="nav navbar-nav">
     <li class="active"><a href="#">Sign In <span class="sr-only">(current)</span></a></li>
     <li class="active"><a href="#">Settings <span class="sr-only">(current)</span></a></li>
-    <li class="active"><a href="file:///Users/Pablo/Desktop/Github/CSJSportNews/CSJSportNews-Pablo/about.html">About <span class="sr-only">(current)</span></a></li>
+    <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sports <span class="caret"></span></a>
       <ul class="dropdown-menu">
@@ -82,17 +68,12 @@
 </nav>
 
     <div>
-        <h1>CSJ Deportes</h1>
+        <h1>About Us</h1>
     </div>
     <div>
-      <h2>Live Scores</h2>
-    </div>
-    <div>
-      <p id = "team1"></p>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-</body>
+      <h2>CSJ Deportes</h2>
+      <p>This aplication is still in development. It was created by the App Development calss at Colegio San José. The information used in this application was obtained from: <a href="https://www.csjpt.org/index.php/actividades/deportes">CSJ deportes.</a></p>
+      <p>
+        Members: Pablo Medero, Marcos Nieves, Carlos Power, Enrique Viera
+      </p>
 </html>

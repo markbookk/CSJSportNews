@@ -14,6 +14,10 @@
     </style>
   </head>
   <body>
+    <div id = "game">   </div>
+    <div id = "team1">   </div>
+    <div id = "team2">   </div>
+
     <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
@@ -27,8 +31,12 @@
         $('#m').val('');
         return false;
       });
+      socket.on('welcome-live-score', function(data) {
+        document.getElementById("team1").innerHTML = data.message;
+      });
+
       socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg));
+        document.getElementById("team1").innerHTML = msg;
       });
     </script>
   </body>
