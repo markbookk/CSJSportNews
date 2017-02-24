@@ -1,8 +1,7 @@
-body {
-    background: red;
-    background-position: center;
-    background-size: cover;
+body{
+    background-color: red;
 }
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
     margin-bottom: 0;
@@ -24,12 +23,10 @@ footer {
     width: 320px;
     height: 320px;
     margin-bottom: 10px;
-    margin-left: 27px;
 }
 .demo-card-square > .mdl-card__title {
-    color: #fff;
-    background:
-            url('../assets/demos/dog.png') no-repeat #46B6AC;
+    background: yellow;
+    /*background: no-repeat #46B6AC;*/
 }
 .mdl-card{
     width: inherit;
@@ -46,4 +43,3 @@ footer {
     text-align: center;
 }
 
-.
