@@ -10,6 +10,7 @@ var score1 = "";
 var score2 = "";
 var token = "";
 
+<<<<<<< HEAD
 var gameStringChecker = "";
 var position = "";
 
@@ -26,6 +27,12 @@ var sportName_2 = "";
 var sportName_3 = "";
 
 var letterNick = "";
+=======
+var express = require('express');
+
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
 
 
 app.get('/', function(req, res){
@@ -37,14 +44,21 @@ app.get('/panel', function(req, res){
   res.sendfile('panel.html');
 });
 
+<<<<<<< HEAD
 //  app.use(express.static(path.join(__dirname, 'styles')));
+=======
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
 
 io.on('connection', function(socket){
   console.log('User connected.');
 
   //On user first connection...
   var msg2 = team1 + " - " + score1 + " \n" + team2 + " - " + score2;
+<<<<<<< HEAD
   io.emit('welcome-live-score', { message: msg2, sportName_1: sportName_1, sportName_2: sportName_2, sportName_3: sportName_3});
+=======
+  io.emit('welcome-live-score', { message: msg2});
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
 
   socket.on('chat message', function(msg){
     //Create string to a array.
@@ -76,6 +90,11 @@ io.on('connection', function(socket){
 
 
     //validateToken();
+<<<<<<< HEAD
+=======
+    console.log(gameInfo[0]);
+    console.log(token);
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
     if (gameInfo[0] != token) {
       msg = "Error: Give me token!";
       io.emit('chat message', msg);
@@ -83,6 +102,7 @@ io.on('connection', function(socket){
     }
 
     if (gameInfo[1] == "setTeam") {
+<<<<<<< HEAD
       setTeam(gameInfo[3], gameInfo[4], gameInfo[2]);
       var locationSetTeam = gameInfo[2];
     }else {
@@ -93,10 +113,24 @@ io.on('connection', function(socket){
       }else if(team == team2) {
           score2 = gameInfo[3];
       }else if (gameInfo[1] !="setTeam" && gameInfo[0] != "gimmeToken" && gameInfo[1] != "setSport"){
+=======
+      setTeam(gameInfo[2], gameInfo[3]);
+    }else {
+      game = gameInfo[1];
+      console.log("game: " + game);
+      team = gameInfo[2];
+      console.log("team: " + team);
+      if (team == team1) {
+          score1 = gameInfo[3];
+        }else if(team == team2) {
+          score2 = gameInfo[3];
+        }else if (gameInfo[1] !="setTeam" || gameInfo[0] != "gimmeToken"){
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
           console.log('Error: Team name!');
           msg = "Error: Bad use of syntax!</br></br>Please do:</br>(token) (sport) (team name) (score)</br>Ex. yDrRFe Basketball CSJ 34";
           io.emit('chat message', msg);
           return;
+<<<<<<< HEAD
       }
       score = gameInfo[3];
       console.log("score: " + score);
@@ -153,6 +187,15 @@ io.on('connection', function(socket){
 
 
     io.emit('chat message', msg);
+=======
+        }
+        score = gameInfo[3];
+        console.log("score: " + score);
+    }
+    msg = team1 + " - " + score1 + " \n" + team2 + " - " + score2;
+    io.emit('chat message', msg);
+    console.log(msg);
+>>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
   });
 
   socket.on('disconnect', function() {
