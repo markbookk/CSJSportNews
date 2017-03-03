@@ -60,6 +60,7 @@ var usersAmount = 0;
 
 app.get('/', function(req, res){
   res.sendfile('main.html');
+  app.use(express.static(path.join(__dirname, '.')));
   //res.sendfile('main.css');
 });
 
@@ -67,7 +68,6 @@ app.get('/panel', function(req, res){
   res.sendfile('panel.html');
 });
 
-app.use(express.static(path.join(__dirname, 'styles')));
 
 io.on('connection', function(socket){
   usersAmount ++;
