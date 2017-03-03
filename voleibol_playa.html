@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="/">Resultados</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="voleibol.html">Voleibol</a></li>
+                        <li><a href="futbol.html">Fútbol</a></li>
+                        <li><a href="#campotraviesa.html">Campo traviesa</a></li>
+                        <li><a href="golf.html">Golf</a></li>
+                        <li><a href="baloncesto.html">Baloncesto</a></li>
+                        <li><a href="natacion.html">Natación</a></li>
+                        <li><a href="tenis.html">Tenis</a></li>
+                        <li><a href="pista_y_campo.html">Pista y campo</a></li>
+                        <li><a href="futbol_sala.html">Futsal</a></li>
+                        <li><a href="beisbol.html">Pelota</a></li>
+                        <li><a href="bolos.html">Bowling</a></li>
+                        <li><a href="tenis_de_mesa.html">Tenis de mesa</a></li>
+                        <li><a href="voleibol_playa.html">Voleibol de playa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Noticias</a></li>
+             </ul>
+        </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.container-fluid -->
+</nav>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+
+
+    <!-- Wrapper for slides -->
+
+    <div class="carousel-inner" role="listbox">
+      <h1 style="position: absolute;">alskdjflkas</h1>
+      <div class="item active">
+        <img src="https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/7/8/d/highres_434238317.jpeg" alt="Image">
+        <div class="carousel-caption">
+          <h1>Voleibol de playa</h1>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+
+</div>
+
+<div class="container text-center">
+  <h3>Equipo</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://1.cdn.edl.io/O21dg68t9EH8wYpg68D1Dk3xesItg7ak1KWwKZkWRaG7F5oA.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="https://1.cdn.edl.io/GCr28K7ZBMMrEMSeQLVVprcsTCFo9jTZa5lNsVJglVzP4ndW.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Miembros:</p>
+      <div style="text-align:left;">
+        <ul>
+          <li>Gustavo Buitrago</li>
+          <li>Gustavo Feliciano</li>
+          <li>Jaime Matos</li>
+          <li>Ricardo Murati</li>
+          <li>William Rivera</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
