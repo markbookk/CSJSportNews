@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Reading from text files</title>
+</head>
+<body>
+
+<?php
+
+	$f = fopen("unitednations.txt", "r");
+
+	while(!feof($f)) { 
+	    echo fgets($f) . "<br />";
+    }
+
+fclose($f);
+
+?>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="main.css">
+    <title> CSJ Deportes </title>
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+    var socket = io();
+    socket.on('welcome-live-score', function(data) {
+      document.getElementById("team1").innerHTML = data.message;
+    });
+
+    socket.on('chat message', function(msg){
+      document.getElementById("team1").innerHTML = msg;
+    });
+  </script>
+    <div>
+        <h1>CSJ Deportes</h1>
+    </div>
+        <h2>Live Scores!</h2>
+        <p id = "team1"></p>
+</body>
+</html>

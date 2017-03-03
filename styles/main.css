@@ -1,0 +1,55 @@
+body{
+    background-color: red;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    height: auto;
+    min-height: 100px;
+    max-height: 50em;
+}
+
+.carousel-caption {
+    height: 65%;
+}
+
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+    margin-bottom: 10px;
+}
+.demo-card-square > .mdl-card__title {
+    background: yellow;
+    /*background: no-repeat #46B6AC;*/
+}
+.mdl-card{
+    width: inherit;
+    min-width: 330px;
+}
+.card{
+    justify-content: center;
+}
+
+.mdl-card__title-text{
+    text-align: center;
+}
+.mdl-card__supporting-text{
+    text-align: center;
+}
