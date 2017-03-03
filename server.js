@@ -2,19 +2,46 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var path = require('path');
+var express = require('express');
+
 var team = "";
+
 var team1 = "";
 var team2 = "";
-var score = "";
+
 var score1 = "";
 var score2 = "";
+
+var score1_1 = "";
+var score2_1 = "";
+
+var score1_2 = "";
+var score2_2 = "";
+
+var score1_3 = "";
+var score2_3 = "";
+
+
 var token = "";
 
-<<<<<<< HEAD
 var gameStringChecker = "";
 var position = "";
 
-var game = "";
+var game = ""; //Se supone q sea la letra pequena del deporte
+
+var team1_1 = "";
+var team2_1 = "";
+
+var team1_2 = "";
+var team2_2 = "";
+
+var team1_3 = "";
+var team2_3 = "";
+
+var game1 = team1_1 + " - " + score1_1 + " \n" + team2_1 + " - " + score2_1;
+var game2 = team1_2 + " - " + score1_2 + " \n" + team2_2 + " - " + score2_2;
+var game3 = team1_3 + " - " + score1_3 + " \n" + team2_3 + " - " + score2_3;
 
 //Name of Sports
 var sportNick_1 = "";
@@ -27,12 +54,8 @@ var sportName_2 = "";
 var sportName_3 = "";
 
 var letterNick = "";
-=======
-var express = require('express');
 
-var path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
+var usersAmount = 0;
 
 
 app.get('/', function(req, res){
@@ -44,21 +67,15 @@ app.get('/panel', function(req, res){
   res.sendfile('panel.html');
 });
 
-<<<<<<< HEAD
-//  app.use(express.static(path.join(__dirname, 'styles')));
-=======
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
+app.use(express.static(path.join(__dirname, 'styles')));
 
 io.on('connection', function(socket){
-  console.log('User connected.');
+  usersAmount ++;
+  console.log('User connected... Current users: ' + usersAmount);
 
   //On user first connection...
   var msg2 = team1 + " - " + score1 + " \n" + team2 + " - " + score2;
-<<<<<<< HEAD
-  io.emit('welcome-live-score', { message: msg2, sportName_1: sportName_1, sportName_2: sportName_2, sportName_3: sportName_3});
-=======
-  io.emit('welcome-live-score', { message: msg2});
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
+  io.emit('welcome-live-score', { message: msg2, sportName_1: sportName_1, sportName_2: sportName_2, sportName_3: sportName_3, sportScore_1: game1, sportScore_2: game2, sportScore_3: game3});
 
   socket.on('chat message', function(msg){
     //Create string to a array.
@@ -73,7 +90,6 @@ io.on('connection', function(socket){
     3 - score/parameters
 
     */
-
     //generateToken();
     if (gameInfo[0] == "gimeeToken") {
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -90,53 +106,38 @@ io.on('connection', function(socket){
 
 
     //validateToken();
-<<<<<<< HEAD
-=======
-    console.log(gameInfo[0]);
-    console.log(token);
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
     if (gameInfo[0] != token) {
       msg = "Error: Give me token!";
       io.emit('chat message', msg);
       return;
     }
 
-    if (gameInfo[1] == "setTeam") {
-<<<<<<< HEAD
-      setTeam(gameInfo[3], gameInfo[4], gameInfo[2]);
-      var locationSetTeam = gameInfo[2];
-    }else {
-      game = gameInfo[3];
-      team = gameInfo[2];
-      if (team == team1) {
-          score1 = gameInfo[3];
-      }else if(team == team2) {
-          score2 = gameInfo[3];
-      }else if (gameInfo[1] !="setTeam" && gameInfo[0] != "gimmeToken" && gameInfo[1] != "setSport"){
-=======
-      setTeam(gameInfo[2], gameInfo[3]);
-    }else {
+    if (gameInfo[2] == "setTeam") {
+      setTeam(gameInfo[1], gameInfo[3], gameInfo[4]);
+      //msg = "Team set succesfully!</br>Team: " + gameInfo[4] + "<br>Position: " + gameInfo[3];
+    }else if (gameInfo[1] == "setSport") {} //if setSport pichea lo de setear el score y el team
+    else { // Setting score for live scores
       game = gameInfo[1];
-      console.log("game: " + game);
       team = gameInfo[2];
-      console.log("team: " + team);
-      if (team == team1) {
-          score1 = gameInfo[3];
-        }else if(team == team2) {
-          score2 = gameInfo[3];
-        }else if (gameInfo[1] !="setTeam" || gameInfo[0] != "gimmeToken"){
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
-          console.log('Error: Team name!');
-          msg = "Error: Bad use of syntax!</br></br>Please do:</br>(token) (sport) (team name) (score)</br>Ex. yDrRFe Basketball CSJ 34";
-          io.emit('chat message', msg);
-          return;
-<<<<<<< HEAD
-      }
-      score = gameInfo[3];
-      console.log("score: " + score);
+      //score = gameInfo[3];
+      setScore(game, team, gameInfo[3]);
     }
 
-    msg = team1 + " - " + score1 + " \n" + team2 + " - " + score2;
+    if (gameInfo[2] !="setTeam" && gameInfo[0] != "gimmeToken" && gameInfo[1] != "setSport"){
+        console.log('Error: Team name!');
+        msg = "Error: Bad use of syntax!</br></br>" + 
+        "Usage:</br>" + 
+        "(token) (sport initial) (team name) (score)</br>" + 
+        "Ex. yDrRFe Basketball CSJ 34";
+        io.emit('chat message', msg);
+        return;
+    }
+    if (checkPos() == 1) msg = team1_1 + " - " + score1_1 + " \n" + team2_1 + " - " + score2_1;
+    if (checkPos() == 2) msg = team1_2 + " - " + score1_2 + " \n" + team2_2 + " - " + score2_2;
+    if (checkPos() == 3) msg = team1_3 + " - " + score1_3 + " \n" + team2_3 + " - " + score2_3;
+    
+
+
 
 
     //setSportPosition
@@ -172,14 +173,17 @@ io.on('connection', function(socket){
 
 
     //Check location where to put the score
-    if (game == sportNick_1) {
-      io.emit('sport-score-1', { message: msg});
+    if (checkPos() == 1) {
+      game1 = team1_1 + " - " + score1_1 + " \n" + team2_1 + " - " + score2_1;
+      io.emit('sport-score-1', { message: game1});
     }
-    else if (game == sportNick_2) {
-      io.emit('sport-score-2', { message: msg});
+    else if (checkPos() == 2) {
+      game2 = team1_2 + " - " + score1_2 + " \n" + team2_2 + " - " + score2_2;
+      io.emit('sport-score-2', { message: game2});
     }
-    else if (game == sportNick_3) {
-      io.emit('sport-score-3', { message: msg});
+    else if (checkPos() == 3) {
+      game3= team1_3 + " - " + score1_3 + " \n" + team2_3 + " - " + score2_3;
+      io.emit('sport-score-3', { message: game3});
     }
 
 
@@ -187,19 +191,11 @@ io.on('connection', function(socket){
 
 
     io.emit('chat message', msg);
-=======
-        }
-        score = gameInfo[3];
-        console.log("score: " + score);
-    }
-    msg = team1 + " - " + score1 + " \n" + team2 + " - " + score2;
-    io.emit('chat message', msg);
-    console.log(msg);
->>>>>>> 3d5be8338c907ec991a1ba681617a227e845606d
   });
 
   socket.on('disconnect', function() {
-    console.log('User disconnected!');
+    usersAmount --;
+    console.log('User disconnected! Current users: ' + usersAmount);
   });
 });
 
@@ -209,17 +205,48 @@ http.listen(3000, function(){
 });
 
 //whereAt refers to the sport
-function setTeam(position, team, whereAt) {
-  if (position == "1") {
-    team1 = team;
-    return "team1";
+function setTeam(sport, position, team) {
+  //Check first the sport via the nickname and then assign the team
+  //per name etc
+  game = sport;
+  if (sport == sportNick_1) {
+    if (position == "1") team1_1 = team;
+    else if (position == "2") team2_1 = team;
   }
-  if (position == "2") {
-    team2 = team;
-    return "team2";
+  else if (sport == sportNick_2) {
+    if (position == "1") team1_2 = team;
+    else if (position == "2") team2_2 = team;
+  }
+  else if (sport == sportNick_3) {
+    if (position == "1") team1_3 = team;
+    else if (position == "2") team2_3 = team;
+  }
+  else return;
+}
+
+function setScore(sport, team, score) {
+  /*
+  If the sport is one of the 3 established then:
+  1. Check what position is the team (left/right)
+  2. Assign the score to left/right team
+  */
+  if (checkPos() == 1) {
+    if (team == team1_1) score1_1 = score;
+    else if (team == team2_1) score2_1 = score;
+  }else if (checkPos() == 2) {
+    if (team == team1_2) score1_2 = score;
+    else if (team == team2_2) score2_2 = score;
+  }else if (checkPos() == 3) {
+    if (team == team1_3) score1_3 = score;
+    else if (team == team2_3) score2_3 = score;
   }
 }
 
+function checkPos() {
+    if (game == sportNick_1) return 1;
+    else if (game == sportNick_2) return 2;
+    else if (game == sportNick_3) return 3;
+}
 
 // function validateToken() {
 
