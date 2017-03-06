@@ -1,79 +1,88 @@
 <!DOCTYPE html>
-<!-- Latest compiled and minified CSS -->
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="main.css">
     <title>CSJ Deportes</title>
-</head>
 
+    <style>
+        .block1 img{
+            width: 100%;
+            margin: auto;
+            height: auto;
+            min-height: 100px;
+            max-height: 50em;
+        }
+        .block2 h1{
+            text-align: center;
+        }
+    </style>
+
+</head>
 <body>
 
-  <nav class="navbar navbar-default">
+<!--Navbar-->
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-<!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand" href="#"><img alt="Brand" style="width: 30px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
-</div>
-
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Sign In <span class="sr-only">(current)</span></a></li>
-    <li class="active"><a href="#">Settings <span class="sr-only">(current)</span></a></li>
-    <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sports <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Basketball</a></li>
-        <li><a href="#">Soccer</a></li>
-        <li><a href="#">Track and Feild</a></li>
-        <li><a href="#">Volleyball</a></li>
-        <li><a href="#">Golf</a></li>
-        <li><a href="#">Swimming</a></li>
-        <li><a href="#">Tennis</a></li>
-        <li><a href="#">Cross Country</a></li>
-        <li><a href="#">Indoor Soccer</a></li>
-        <li><a href="#">Baseball</a></li>
-        <li><a href="#">Bowling</a></li>
-        <li><a href="#">Ping Pong</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul class="nav navbar-nav navbar-left">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Season 1</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="/">Resultados</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="voleibol.html">Voleibol</a></li>
+                        <li><a href="futbol.html">Fútbol</a></li>
+                        <li><a href="campotraviesa.html">Campo traviesa</a></li>
+                        <li><a href="golf.html">Golf</a></li>
+                        <li><a href="baloncesto.html">Baloncesto</a></li>
+                        <li><a href="natacion.html">Natación</a></li>
+                        <li><a href="tenis.html">Tenis</a></li>
+                        <li><a href="pista_y_campo.html">Pista y campo</a></li>
+                        <li><a href="futbol_sala.html">Futsal</a></li>
+                        <li><a href="beisbol.html">Pelota</a></li>
+                        <li><a href="bolos.html">Bowling</a></li>
+                        <li><a href="tenis_de_mesa.html">Tenis de mesa</a></li>
+                        <li><a href="voleibol_playa.html">Voleibol de playa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.container-fluid -->
 </nav>
 
-    <div>
-        <h1>About Us</h1>
-    </div>
-    <div>
-      <h2>CSJ Deportes</h2>
-      <p>This aplication is still in development. It was created by the App Development calss at Colegio San José. The information used in this application was obtained from: <a href="https://www.csjpt.org/index.php/actividades/deportes">CSJ deportes.</a></p>
-      <p>
-        Members: Pablo Medero, Marcos Nieves, Carlos Power, Enrique Viera
-      </p>
+<div class="block1">
+    <img src="http://www.csjpr.org/album/47506/71534.jpg">
+</div>
+
+<div class="block2">
+    <h1>Sobre nosotros</h1>
+</div>
+
+<!--<footer class="container-fluid text-center">-->
+    <!--<p>Copyright CSJ Deportes 2017</p>-->
+<!--</footer>-->
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</body>
 </html>
