@@ -15,11 +15,14 @@
             width: 100%;
             margin: auto;
             height: auto;
-            min-height: 100px;
-            max-height: 50em;
+            max-height: 500px;
         }
         .block2 h1{
             text-align: center;
+        }
+        .block2 p{
+            text-align: center;
+            padding: 0px 50px 0px 50px;
         }
     </style>
 
@@ -37,13 +40,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
+            <a class="navbar-brand" href="main.html"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="about.html">Sobre nosotros</a></li>
-                <li><a href="/">Resultados</a></li>
+                <li><a href="main.html">Resultados</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -69,20 +72,27 @@
 </nav>
 
 <div class="block1">
-    <img src="http://www.csjpr.org/album/47506/71534.jpg">
+    <img src="20161201_113453.jpg">
 </div>
 
 <div class="block2">
     <h1>Sobre nosotros</h1>
+    <p>
+        Bienvenidos! Somos cuatro estudiantes del Colegio San José con una simple misión: llevar los resultados de los
+        deportes del colegio al estudiantado instantáneamente. Los integrantes somos: Pablo Medero, Marcos Nieves, Carlos
+        Power y Enrique Viera. Esta aplicación continuará siendo actualizada, así que pendientes!
+    </p>
 </div>
 
-<!--<footer class="container-fluid text-center">-->
-    <!--<p>Copyright CSJ Deportes 2017</p>-->
-<!--</footer>-->
+<footer class="container-fluid text-center">
+    <p>Copyright CSJ Deportes 2017</p>
+</footer>
+
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
 </body>
 </html>
