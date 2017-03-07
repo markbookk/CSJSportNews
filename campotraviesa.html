@@ -7,35 +7,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none;
-    }
-  }
-  </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<!--Navbar-->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,19 +22,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
+            <a class="navbar-brand" href="main.html"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="about.html">Sobre nosotros</a></li>
-                <li><a href="/">Resultados</a></li>
+                <li><a href="main.html">Resultados</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="voleibol.html">Voleibol</a></li>
                         <li><a href="futbol.html">Fútbol</a></li>
-                        <li><a href="#campotraviesa.html">Campo traviesa</a></li>
+                        <li><a href="campotraviesa.html">Campo traviesa</a></li>
                         <li><a href="golf.html">Golf</a></li>
                         <li><a href="baloncesto.html">Baloncesto</a></li>
                         <li><a href="natacion.html">Natación</a></li>
@@ -72,7 +48,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Noticias</a></li>
-             </ul>
+            </ul>
         </div> <!-- /.navbar-collapse -->
     </div> <!-- /.container-fluid -->
 </nav>
@@ -86,9 +62,8 @@
     <!-- Wrapper for slides -->
 
     <div class="carousel-inner" role="listbox">
-      <h1 style="position: absolute;">alskdjflkas</h1>
       <div class="item active">
-        <img src="http://www.clipartkid.com/images/664/pix-for-cross-country-symbol-clip-art-q8h8bw-clipart.jpg" alt="Image">
+        <img src="cottocross.jpg" alt="Image">
         <div class="carousel-caption">
           <h1>Campo Traviesa</h1>
         </div>
@@ -177,19 +152,11 @@
         </ul>
       </div>
     </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-    </div>
   </div>
 </div><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+    <p>Copyright CSJ Deportes 2017</p>
 </footer>
 
 </body>
