@@ -59,13 +59,13 @@ var usersAmount = 0;
 
 
 app.get('/', function(req, res){
-  res.sendfile('main.html');
+  res.sendfile('./main.html');
   app.use(express.static(path.join(__dirname, '.')));
   //res.sendfile('main.css');
 });
 
 app.get('/panel', function(req, res){
-  res.sendfile('panel.html');
+  res.sendfile('./panel.html');
 });
 
 
@@ -122,15 +122,16 @@ io.on('connection', function(socket){
       //score = gameInfo[3];
       setScore(game, team, gameInfo[3]);
     }
-
-    if (gameInfo[2] !="setTeam" && gameInfo[0] != "gimmeToken" && gameInfo[1] != "setSport"){
-        console.log('Error: Team name!');
-        msg = "Error: Bad use of syntax!</br></br>" + 
-        "Usage:</br>" + 
-        "(token) (sport initial) (team name) (score)</br>" + 
-        "Ex. yDrRFe Basketball CSJ 34";
-        io.emit('chat message', msg);
-        return;
+    if (setScore() == "Error"){
+      if (gameInfo[2] !="setTeam" && gameInfo[0] != "gimmeToken" && gameInfo[1] != "setSport"){
+          console.log('Error: Team name!');
+          msg = "Error: Bad use of syntax!</br></br>" + 
+          "Usage:</br>" + 
+          "(token) (sport initial) (team name) (score)</br>" + 
+          "Ex. yDrRFe Basketball CSJ 34";
+          io.emit('chat message', msg);
+          return;
+      }
     }
     if (checkPos() == 1) msg = team1_1 + " - " + score1_1 + " \n" + team2_1 + " - " + score2_1;
     if (checkPos() == 2) msg = team1_2 + " - " + score1_2 + " \n" + team2_2 + " - " + score2_2;
@@ -239,7 +240,7 @@ function setScore(sport, team, score) {
   }else if (checkPos() == 3) {
     if (team == team1_3) score1_3 = score;
     else if (team == team2_3) score2_3 = score;
-  }
+  }else {return "Error"}
 }
 
 function checkPos() {
@@ -267,4 +268,3 @@ Future:
 - Add a list of all commands, add to array in order to be useful to check if commands have been sent or if its a bad syntax.
 
 */
-
