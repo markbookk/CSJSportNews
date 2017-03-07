@@ -1,45 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title> CSJ Deportes </title>
+    <title>CSJ Deportes</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+<!--Navbar-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <a href="#" class="navbar-brand">CSJ Deportes</a>
+            <a class="navbar-brand" href="#"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-nav-demo">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Equipos</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Resultados</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="file:///Users/Pablo/Desktop/Github/CSJSportNews/CSJSportNews-Pablo/CSJ-Deportes-equipos/voleibol.html">Voleibol</a></li>
+                        <li><a href="#">Fútbol</a></li>
+                        <li><a href="#">Campo traviesa</a></li>
+                        <li><a href="#">Golf</a></li>
+                        <li><a href="file:///Users/Pablo/Desktop/Github/CSJSportNews/CSJSportNews-Pablo/CSJ-Deportes-equipos/baloncesto.html">Baloncesto</a></li>
+                        <li><a href="file:///Users/Pablo/Desktop/Github/CSJSportNews/CSJSportNews-Pablo/CSJ-Deportes-equipos/natacion.html">Natación</a></li>
+                        <li><a href="#">Tenis</a></li>
+                        <li><a href="#">Pista y campo</a></li>
+                        <li><a href="#">Futsal</a></li>
+                        <li><a href="#">Pelota</a></li>
+                        <li><a href="#">Bowling</a></li>
+                        <li><a href="#">Tenis de mesa</a></li>
+                        <li><a href="#">Voleibol de playa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Noticias</a></li>
+             </ul>
+        </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.container-fluid -->
+</nav>
 
-            </ul>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://www.csjpr.org/album/47506/71534.jpg" alt="Image">
+            <div class="carousel-caption">
+                <h3>CSJ Deportes</h3>
+                <p>Todos los deportes del Colegio San José. Instantáneos.</p>
+            </div>
         </div>
-    <div>
-        <h1>CSJ Deportes</h1>
+
+        <div class="item">
+            <img src="https://scontent.fsig1-1.fna.fbcdn.net/v/t1.0-9/16387422_1262108923858407_6278324817822578634_n.jpg?oh=ed3a95a6f411f5e6f04550237d338ca5&oe=59309924" alt="Image">
+            <div class="carousel-caption">
+                <h3>CSJ Deportes</h3>
+                <p>Todos los deportes del Colegio San José. Instantáneos.</p>
+            </div>
+        </div>
     </div>
-    <div id = liveScores>
-        <h2>Live Scores!</h2>
-        <p>CSJ 2 - 1 CSI</p>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container text-center">
+    <h3>Resultados en vivo</h3><br>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text" id="sport1">Deporte1</h2>
+                </div>
+                <div class="mdl-card__supporting-text" id="score1">
+                    Score1
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text" id="sport2">Deporte2</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text" id="score2">
+                        Score2
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ver más
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text" id="sport3">Deporte3</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text" id="score3">
+                        Score3
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                            Ver más
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <h2>Noticias</h2>
-    </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <p>Footer Text</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
