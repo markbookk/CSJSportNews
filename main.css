@@ -3,10 +3,6 @@
     margin-bottom: 0;
     border-radius: 0;
 }
-/* Carousel base class */
-.carousel {
-    margin-bottom: 4rem;
-}
 /* Add a gray background color and some padding to the footer */
 footer {
     background-color: #f2f2f2;
@@ -25,14 +21,13 @@ footer {
     height: 65%;
 }
 
-
 .demo-card-square.mdl-card {
     width: 320px;
     height: 320px;
     margin-bottom: 10px;
 }
 .demo-card-square > .mdl-card__title {
-    background: yellow;
+    background: red;
     /*background: no-repeat #46B6AC;*/
 }
 .mdl-card{
