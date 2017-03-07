@@ -22,7 +22,6 @@ footer {
 }
 
 .demo-card-square.mdl-card {
-    width: 320px;
     height: 320px;
     margin-bottom: 10px;
 }
@@ -30,7 +29,7 @@ footer {
     background: red;
     /*background: no-repeat #46B6AC;*/
 }
-.mdl-card{   /*To change width I have to change here*/
+.mdl-card{
     width: inherit;
     min-width: 330px;
 }
