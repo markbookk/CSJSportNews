@@ -1,6 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Beisbol CSJ Deportes</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="main.html"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="main.html">Resultados</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deportes<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="voleibol.html">Voleibol</a></li>
+                        <li><a href="futbol.html">Fútbol</a></li>
+                        <li><a href="campotraviesa.html">Campo traviesa</a></li>
+                        <li><a href="golf.html">Golf</a></li>
+                        <li><a href="baloncesto.html">Baloncesto</a></li>
+                        <li><a href="natacion.html">Natación</a></li>
+                        <li><a href="tenis.html">Tenis</a></li>
+                        <li><a href="pista_y_campo.html">Pista y campo</a></li>
+                        <li><a href="futbol_sala.html">Futsal</a></li>
+                        <li><a href="beisbol.html">Pelota</a></li>
+                        <li><a href="bolos.html">Bowling</a></li>
+                        <li><a href="tenis_de_mesa.html">Tenis de mesa</a></li>
+                        <li><a href="voleibol_playa.html">Voleibol de playa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Noticias</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://elvocero.com/wp-content/uploads/2016/05/Screen-Shot-2016-05-17-at-8.55.56-AM-795x524.png" alt="Image">
+            <div class="carousel-caption">
+                <h1>Beisbol</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <h3>Equipo</h3><br>
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="https://1.cdn.edl.io/MoL2S3hu7Y0iSAJZy4edwUhFb34vYTD0XZdyjYPcdWaR0jwE.jpg" class="img-responsive" style="width:100%" alt="Image">
+            <p>Miembros</p>
+            <div style="text-align:left;">
+              <ul>
+                <li>Alberto Berríos</li>
+                <li>Nicolás Besosa</li>
+                <li>André Cullen</li>
+                <li>José Fernández</li>
+                <li>Giancarlo Font</li>
+                <li>Juan Pablo García</li>
+                <li>Sebastián Jaén</li>
+                <li>Yusef Kutbi</li>
+                <li>Ángel Santana</li>
+                <li>Alejandro Medina</li>
+                <li>Jorge Ignacio Mejía</li>
+                <li>Anthony Orta</li>
+                <li>Andrés Varona </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+    <p>Copyright CSJ Deportes 2017</p>
+</footer>
+
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +143,7 @@
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -48,7 +153,7 @@
             </button>
             <a class="navbar-brand" href="/"><img alt="Brand" style="width: 25px" style="height: 50px" src="http://www.aabpr.org/multimedia/photos/B18B5D05-F971-9CDC-2AE4BD358C1E4DFD_lg.jpg"></a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="about.html">Sobre nosotros</a></li>
@@ -73,20 +178,20 @@
                 </li>
                 <li><a href="#">Noticias</a></li>
              </ul>
-        </div> <!-- /.navbar-collapse -->
-    </div> <!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
 
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
+
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
+
 
     <div class="carousel-inner" role="listbox">
       <h1 style="position: absolute;">alskdjflkas</h1>
@@ -143,3 +248,4 @@
 
 </body>
 </html>
+-->
