@@ -147,27 +147,33 @@ io.on('connection', function(socket){
       if (gameInfo[2] == "1") {
         sportName = gameInfo[3];
         letterNick = sportName.split("");
-        sportNick_1 = letterNick[0].toLowerCase();
+        //sportNick_1 = letterNick[0].toLowerCase();
+        sportNick_1 = "a";
       }else if (gameInfo[2] == "2") {
         sportName = gameInfo[3];
         letterNick = sportName.split("");
-        sportNick_2 = letterNick[0].toLowerCase();
+        //sportNick_2 = letterNick[0].toLowerCase();
+        sportNick_2 = "b";
       }else if (gameInfo[2] == "3") {
         sportName = gameInfo[3];
         letterNick = sportName.split("");
-        sportNick_3 = letterNick[0].toLowerCase();
+        //sportNick_3 = letterNick[0].toLowerCase();
+        sportNick_3 = "c";
       }
     }
 
 
     //setSport()
     if (gameInfo[1] == "setSport" && gameInfo[2] == "1") {  //Normally you would be doing setTeam which in that case the sport string would be the lowercase first letter of the sport. The problem is when you are doing setSport, because it is a complete word instead so you check it again with lowercase first letter.
+      while (sportName.includes("_")) { sportName = sportName.replace("_", "&nbsp;");}
       io.emit('sport-name-1', { sport: sportName});
       sportName_1 = sportName;
     }else if(gameInfo[1] == "setSport" && gameInfo[2] == "2") {
+      while (sportName.includes("_")) { sportName = sportName.replace("_", "&nbsp;");}
       io.emit('sport-name-2', { sport: sportName});
       sportName_2 = sportName;
     }else if(gameInfo[1] == "setSport" && gameInfo[2] == "3") {
+      while (sportName.includes("_")) { sportName = sportName.replace("_", "&nbsp;");}
       io.emit('sport-name-3', { sport: sportName});
       sportName_3 = sportName;
     }
@@ -176,14 +182,17 @@ io.on('connection', function(socket){
     //Check location where to put the score
     if (checkPos() == 1) {
       game1 = team1_1 + " - " + score1_1 + " \n" + team2_1 + " - " + score2_1;
+      while (game1.includes("_")){ game1 = game1.replace("_", "&nbsp;");}
       io.emit('sport-score-1', { message: game1});
     }
     else if (checkPos() == 2) {
       game2 = team1_2 + " - " + score1_2 + " \n" + team2_2 + " - " + score2_2;
+      while (game2.includes("_")) {game2 = game2.replace("_", "&nbsp;");}
       io.emit('sport-score-2', { message: game2});
     }
     else if (checkPos() == 3) {
-      game3= team1_3 + " - " + score1_3 + " \n" + team2_3 + " - " + score2_3;
+      game3 = team1_3 + " - " + score1_3 + " \n" + team2_3 + " - " + score2_3;
+      while (game3.includes("_")){ game3 = game3.replace("_", "&nbsp;");}
       io.emit('sport-score-3', { message: game3});
     }
 
