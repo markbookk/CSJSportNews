@@ -22,7 +22,7 @@ footer {
 }
 
 .demo-card-square.mdl-card {
-    height: 320px;
+    height: 200px;
     margin-bottom: 10px;
 }
 .demo-card-square > .mdl-card__title {
@@ -38,7 +38,8 @@ footer {
 }
 
 .mdl-card__title-text{
-    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 5%;
 }
 .mdl-card__supporting-text{
     text-align: center;
