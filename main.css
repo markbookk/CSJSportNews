@@ -38,8 +38,10 @@ footer {
 }
 
 .mdl-card__title-text{
-    margin-left: 30%;
-    margin-bottom: 5%;
+    position:relative;
+    float:left;
+    width:33%;
+    min-width: 200px
 }
 .mdl-card__supporting-text{
     text-align: center;
